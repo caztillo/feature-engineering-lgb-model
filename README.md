@@ -1,5 +1,12 @@
-<<<<<<< HEAD
-# feature-engineering-lgb-model
-=======
-# feature-engineering-lgb-model-
->>>>>>> 0850c83bd56470a92935ad741a9c2caade36054a
+# Store Item Demand Forecasting Challenge
+A machine learning pipeline for Abhilash Awasthi's Kaggle Solution in [Store Item Demand Forecasting Challenge ](https://www.kaggle.com/abhilashawasthi/feature-engineering-lgb-modelc).
+
+## Execution
+Run `pipeline.py` to execute luigi pipeline.
+
+## Results
+
+Results are storage in `tmp\submission.csv`
+
+
+
