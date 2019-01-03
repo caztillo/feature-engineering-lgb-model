@@ -2,7 +2,7 @@ import luigi
 from tasks.Preprocessing.preprocessing_task import ProcessTrainAndTestData
 from tasks.Feature_Engineering.feature_engineering_task import FeatureEngineering
 from tasks.Train.train_task import Train
-
+from tasks.Prediction.prediction_task import Prediction
 
 
 def create_task_list():
@@ -10,7 +10,7 @@ def create_task_list():
     tasks.append(ProcessTrainAndTestData())
     tasks.append(FeatureEngineering())
     tasks.append(Train())
-
+    tasks.append(Prediction())
     return tasks
 
 def main():

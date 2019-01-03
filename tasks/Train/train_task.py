@@ -4,9 +4,8 @@ import numpy as np
 from tasks.Feature_Engineering.feature_engineering_task import FeatureEngineering
 from tasks.Feature_Engineering.feature_engineering_helper import Feature_Engineering_Helper
 from tasks.Train.train_helper import Train_Helper
-
-from sklearn.model_selection import train_test_split
 import lightgbm as lgb
+from sklearn.externals import joblib
 
 class Train(luigi.Task):
 	def requires(self):
@@ -78,7 +77,7 @@ class Train(luigi.Task):
 								 'gain':100 * gain / gain.sum()}).sort_values('gain', ascending=False)
 		print('Top 25 features:\n', feat_imp.head(25))
 
-		
+		joblib.dump(model, "tmp/train_model.joblib")
 
 		val_df.to_csv(self.output().path,index=False)
 
